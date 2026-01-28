@@ -28,9 +28,9 @@ RUN apt-get update && \
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends git-core && \
-    git clone --branch 4.8.0 --single-branch --depth 1 https://github.com/openstack/python-swiftclient.git /usr/local/src/python-swiftclient && \
+    git clone --branch 4.9.0 --single-branch --depth 1 https://github.com/openstack/python-swiftclient.git /usr/local/src/python-swiftclient && \
     cd /usr/local/src/python-swiftclient && python3 setup.py develop && \
-    git clone --branch 2.35.0 --single-branch --depth 1 https://github.com/openstack/swift.git /usr/local/src/swift && \
+    git clone --branch 2.37.0 --single-branch --depth 1 https://github.com/openstack/swift.git /usr/local/src/swift && \
     cd /usr/local/src/swift && python3 setup.py develop && \
     pip install keystonemiddleware && \
     apt-get remove -y --purge git-core git && \

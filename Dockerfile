@@ -20,6 +20,7 @@ RUN apt-get update && \
         python3-simplejson \
         python3-tz \
         python3-xattr \
+        orphan-sysvinit-scripts \
         rsyslog \
         rsync \
     && \
